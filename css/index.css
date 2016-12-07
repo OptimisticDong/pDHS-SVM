@@ -1,0 +1,59 @@
+body {
+    background-color: #f9f9f9;
+}
+.manipulate .btn-toolbar {
+    position: relative;
+}
+
+.readme .panel{
+    margin-top: 2em;
+    background: #ECF0F1;
+}
+
+.acg {
+    word-wrap: break-word;
+}
+
+.example {
+    margin-top: 4em;
+}
+
+.footer-banner {
+    margin-left: 0;
+    margin-top: 4em;
+}
+
+.continue {
+    margin-bottom: 2em;
+}
+
+#citation .panel{
+    background: #ECF0F1;
+}
+
+.head .jumbotron{
+    background: #1ABC9C;
+    background-image: url("../img/dna1.jpg");
+    color: #2C3E50;
+}
+
+#data .panel-heading,
+#example .panel-heading {
+
+}
+
+.lead {
+    font-weight: 900;
+}
+
+#test {
+    margin-top: 4em;
+}
+
+#data {
+    margin-top: 2em;
+}
+
+#citation {
+    margin-top: 2em;
+}

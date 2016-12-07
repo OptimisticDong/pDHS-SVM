@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>pDHS-SVM:A Prediction Method for Plant DNase I Hypersensitive Sites Based on Support Vector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/dna2.ico">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        body {
+            /*min-height: 2000px;*/
+            padding-top: 5em;
+        }
+    </style>
+</head>
+<body>
+<!-- Static navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" href="index.html">pDHS-SVN</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"><i class="glyphicon glyphicon-home"></i> &nbsp;&nbsp;Home</a></li>
+                <li><a href="#1"><i class="glyphicon glyphicon-book"></i> &nbsp;&nbsp;ReadMe</a></li>
+                <li><a href="#2"><i class="glyphicon glyphicon-flag"></i> &nbsp;&nbsp;Test</a></li>
+                <li><a href="#3"><i class="glyphicon glyphicon-download-alt"></i> &nbsp;&nbsp;Data</a></li>
+                <li><a href="#4"><i class="glyphicon glyphicon-bookmark"></i> &nbsp;&nbsp;Citation</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+
+<div class="container head">
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1 >pDHS-SVM:</h1>
+        <h3 class="lead">A Prediction Method for Plant DNase I Hypersensitive Sites Based on Support Vector</h3>
+        <div id="1"></div>
+    </div>
+
+</div> <!-- /container -->
+
+<!-- start readme -->
+<div class="container readme" id="readme">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body panel-info">
+                    <h4 class="text-center"><i class="glyphicon glyphicon-book"></i> &nbsp;Read Me</h4>
+                    <p class="text-justify">
+                        The web-server iNuc-PseKNC was developed to predict nucleosome occupancy of H. sapiens, C. elegan and D. melanogaster . The overall accuracy of 86.27%, 86.90%, 79.97% were achieved respectively for the above spieces by using jackknife cross-validation. The results obtained by iNuc-PseKNC on various benchmark datasets used by the previous investigators for different genomes also indicated that the current predictor remarkably outperformed its counterparts. All benchmark data can be downloaded from the Data window of this web-server.
+                    </p>
+
+                    <h6 class="text-center">Cavent</h6>
+                    <p class="text-justify">
+                        (1) For each submission, the input sequences must be in FASTA format; i.e., each DNA sequence should start with a greater-than symbol (" > ") in the first column. The words right after the " > " symbol in the single initial line are optional and only used for the purpose of identification and description.
+                    </p>
+                    <p>
+                        (2) If a query sequence contains any illegal characters, wrong results will be obtained.
+                    </p>
+                    <div id="2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end readme! -->
+
+
+<!-- start Manipulate -->
+<div class="container " id="test">
+    <div class="row">
+        <div class="col-lg-12">
+            <h4><i class="glyphicon glyphicon-hand-right"></i> &nbsp;&nbsp;Test</h4>
+            <p>Enter the quer DNA sequences in FASTA format(<a href="#5">Example</a>)</p>
+        </div>
+    </div>
+
+    <div class="row manipulate">
+        <div class="col-lg-9">
+            <div class="form-group">
+                <textarea class="form-control" rows="8"></textarea>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-12 col-xs-12">
+            <form role="form">
+                <div class="form-group form-group-lg form" >
+                    <label class="radio "  for="radio1">
+                        <input name="optionsRadios2" type="radio" data-toggle="radio" value="" id="radio1" required>
+                        <h6>H.sapiens</h6>
+                    </label>
+                    <label class="radio " for="radio2">
+                        <input name="optionsRadios2" type="radio" data-toggle="radio" value="" id="radio2" required checked>
+                        <h6>C.elegan</h6>
+                    </label>
+                    <label class="radio " for="radio3">
+                        <input name="optionsRadios2" type="radio" data-toggle="radio" value="" id="radio3" required checked>
+                        <h6>D.melanogaster</h6>
+                    </label>
+                </div>
+                <div class="btn-group btn-group-lg btn-group-justified">
+                    <a href="Results.html" class="btn btn-primary " type="submit">&nbsp;&nbsp;Submit&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a class="btn btn-primary" type="button">&nbsp;&nbsp;Clear&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                </div>
+                <div id="5"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- end manipulate! -->
+
+<!-- start example -->
+<div class="container example" id="example">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="glyphicon glyphicon-star-empty"></i> &nbsp;&nbsp;Example</h4>
+                </div>
+                <div class="panel-body">
+                    <h6 class="text-left text-primary">>Example1 H.sapiens nucleosome sequence </h6>
+                    <p class="text-justify acg ">
+                        CAACCGCCTCGAACCCCACACCGACGAGCTCCCTCAGGACCCACGCGCGGACACCGAGGCGCCGACCGGAGGAGGGGGCGCTGGGGGTGGGAACGACACACCACCGCTCGGCCTCGGGAACCTGAGGGACAACCCGGAGCGCTCCAG
+                    </p>
+                    <hr>
+                    <h6 class="text-primary">>Example2 H. sapiens  linker sequence</h6>
+                    <p class="text-justify acg">
+                        AAGTTCTAAAGAGTTCCTTGGCCCCTGTTCGAAGCTTTCAGGATACTTTCCATACTTTATGGAATTCTGTAGTTTGGGCCTTTTAAAAACTAATTTCTTTTGCACAGTTAAACAACTACTATATATAGAAAAAAGAAAAATCTTGTT
+                    </p>
+                    <hr>
+                    <h6 class="text-primary">>Example3 H.sapiens DNA fragment </h6>
+                    <p class="text-justify acg">GAGCCGAGCCGAGCCGAGCCGAGCCGGAGCGGGCGGCGAAGGCCGGCGCGGCGAGCAGCAACCATGTCGGTGTTCGGGAAGCTGTTCGGGGCTGGAGGGGGTAAGGCCGGCAAGGGCGGCCCGACCCCCCAGGAGGCCATCCAGCGGCTGCGGGACACGGAAGAGATGTTAAGCAAGAAACAGGAGTTCCTGGAGAAGAAAATCGAGCAGGAGCTGACGGCCGCCAAGAAGCACGGCA</p>
+                    <div id="3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end example -->
+
+
+<!-- start data!-->
+<div class="container" id="data">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="glyphicon glyphicon-star-empty"></i> &nbsp;&nbsp;Data</h4>
+                </div>
+                <div class="panel-body">
+                    <p class="text-justify">The H. sapiens dataset contains 2,273 nucleosome sequences and 2,300 linker DNA sequences, which can be <a href="#">Downloaded &nbsp;<i class="glyphicon glyphicon-download-alt"></i></a>.</p>
+                    <p class="text-justify">The C. elegan dataset contains 2,567 nucleosome sequences and 2,608 linker DNA sequences, which can be <a href="#">Downloaded &nbsp;<i class="glyphicon glyphicon-download-alt"></i></a>.</p>
+                    <p class="text-justify">The D. melanogaster dataset contains 2,900 nucleosome sequences and 2,850 linker DNA sequences, which can be <a href="#"> Downloaded &nbsp;<i class="glyphicon glyphicon-download-alt"></i></a>.</p>
+                    <div id="4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end data! -->
+
+<!-- start Citation -->
+<div class="container" id="citation">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="glyphicon glyphicon-star-empty"></i> &nbsp;&nbsp;Citation</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Please cite the following paper when using the server and data at this website: </p>
+                    <p>
+                        Shou-Hui Guo, En-Ze Deng, Li-Qin Xu, Hui Ding, Hao Lin*, Wei Chen*, Kuo-Chen Chou*. (2014) iNuc-PseKNC: a sequence-based predictor for predicting nucleosome positioning in genomes with pseudo k-tuple nucleotide composition. Bioinformatics, 30(11): 1522-1529.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Citation-->
+<div class="footer-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="text-center">Contact@<a href="">Shanxin Zhang</a></h4>
+                <p class="text-center">Center of Bioinformatics, University of Electronic Science and Technology of China.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/vendor/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/flat-ui.min.js"></script>
+
+<script src="js/application.js"></script>
+
+<script>
+    $('button:not([type="submit"])').on('click', function (e) {
+        var $this = $(this);
+
+        if (!!$this.attr('data-radiocheck-check')) {
+            var el = $this.attr('data-radiocheck-check');
+            $(el).radiocheck('check');
+        } else if (!!$this.attr('data-radiocheck-uncheck')) {
+            var el = $this.attr('data-radiocheck-uncheck');
+            $(el).radiocheck('uncheck');
+        } else if (!!$this.attr('data-radiocheck-toggle')) {
+            var el = $this.attr('data-radiocheck-toggle');
+            $(el).radiocheck('toggle');
+        } else if (!!$this.attr('data-radiocheck-indeterminate')) {
+            var el = $this.attr('data-radiocheck-indeterminate');
+            $(el).radiocheck('indeterminate');
+        } else if (!!$this.attr('data-radiocheck-determinate')) {
+            var el = $this.attr('data-radiocheck-determinate');
+            $(el).radiocheck('determinate');
+        } else if (!!$this.attr('data-radiocheck-disable')) {
+            var el = $this.attr('data-radiocheck-disable');
+            $(el).radiocheck('disable');
+        } else if (!!$this.attr('data-radiocheck-enable')) {
+            var el = $this.attr('data-radiocheck-enable');
+            $(el).radiocheck('enable');
+        } else if (!!$this.attr('data-radiocheck-destroy')) {
+            var el = $this.attr('data-radiocheck-destroy');
+            $(el).radiocheck('destroy');
+        } else if (!!$this.attr('data-radiocheck-init')) {
+            var el = $this.attr('data-radiocheck-init');
+            $(el).radiocheck();
+        }
+
+        e.preventDefault();
+    });
+</script>
+
+</body>
+</html>
